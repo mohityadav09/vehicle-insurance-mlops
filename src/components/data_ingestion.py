@@ -33,6 +33,8 @@ class DataIngestion:
             os.makedirs(dir_path,exist_ok=True)
             logging.info(f"Saving exported data into feature store file path: {feature_store_file_path}")
             dataframe.to_csv(feature_store_file_path,index=False,header=True)
+            if 'id' in dataframe.columns:
+                dataframe.drop('id',axis=1,inplace=True)
             return dataframe
         
         except Exception as e:

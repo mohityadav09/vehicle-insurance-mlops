@@ -1,5 +1,4 @@
 columns:
-  - id: int
   - Gender: category
   - Age: int
   - Driving_License: int

@@ -110,7 +110,7 @@ class ModelEvaluation:
             
             logging.info(f'preprocessing object loaded from filepath {self.data_transformation_artifact.transformed_object_file_path}')
 
-            x = preprocessing.fit_transform(x)
+            x = preprocessing.transform(x)
 
             trained_model = load_object(file_path=self.model_trainer_artifact.trained_model_file_path)
 
